@@ -1,0 +1,77 @@
+html, body {
+        background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 300%;
+        font-family: 'Oxygen', sans-serif;
+        margin: 0;
+        color: white;
+    }
+
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+        color: #FFC312 !important;
+    }
+
+    .navbar-nav .nav-link {
+        color: white !important;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #FFC312 !important;
+    }
+
+    .table-container {
+        margin-top: 20px;
+    }
+
+    .table {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+    }
+
+    .table thead th {
+        background-color: #efece7;
+        color: black;
+    }
+
+    .btn {
+        margin-top: 10px;
+        border: none;
+        border-radius: 1.5rem;
+        padding: 10px 20px;
+        background: #bfd5ec;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+    /* html,
+body,
+.intro {
+  height: 200%;
+}
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.mask-custom {
+  background: rgba(24, 24, 16, .2);
+  border-radius: 2em;
+  backdrop-filter: blur(25px);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+} */

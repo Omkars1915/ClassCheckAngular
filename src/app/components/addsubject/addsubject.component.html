@@ -1,0 +1,57 @@
+<app-menu></app-menu>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<form (ngSubmit)="addsubject()">
+<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="./assets/img/image.png" alt=""/>
+                        <h3>Welcome</h3>
+                        <p>You are 30 seconds away from earning your own money!</p>
+                        
+                    </div>
+                    <div class="col-md-9 register-right">
+                      
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Student Registration</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Subject ID</label><br>
+                                            <input type="number" class="form-control" placeholder="Id *" [(ngModel)]="subjectId" name="subjectId" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Subject Name</label><br>
+                                            <input type="text" class="form-control" placeholder="subject name*" [(ngModel)]="subjectName"  name="subjectName" required />
+                                        </div>
+
+                                      
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Subject Code</label><br>
+                                            <input type="text" class="form-control" placeholder="subject code *" [(ngModel)]="subjectCode" name="subjectCode" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Credits</label><br>
+                                            <input type="number"  name="credits" class="form-control" placeholder="credits *" [(ngModel)]="credits"  required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Department</label><br>
+                                            <select class="form-control" [(ngModel)]="department" name="department">
+                                                <option class="hidden"  selected disabled>Please select your Department</option>
+                                                <option value="Student">Student</option>
+                                                <option value="Faculty">Faculty</option>
+                                            </select>
+                                        </div>
+                                        <input type="submit" class="btnRegister"  value="Add Subject"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form> 

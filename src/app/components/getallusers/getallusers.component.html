@@ -1,0 +1,33 @@
+<app-menu></app-menu>
+<table class="table table-sm table-light">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Role</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+      <th scope="col">Action</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+
+
+    <tr *ngFor="let user of users">
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{ user.role }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.password }}</td>
+
+      <th><a class="btn btn-danger" (click)="deleteuser(user.username)" >DELETE</a> &nbsp;<a class="btn btn-success"
+          [routerLink]="['/edituser',user.username]">EDIT</a>
+      </th>
+
+    </tr>
+  </tbody>
+</table>

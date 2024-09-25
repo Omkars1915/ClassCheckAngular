@@ -1,0 +1,27 @@
+<app-menu></app-menu>
+<table class="table table-sm table-light">
+    <thead>
+      <tr>
+        <th scope="col"> Subject Id</th>
+        <th scope="col">Subject Name</th>
+        <th scope="col">Subject Code</th>
+        <th scope="col">Credits</th> 
+        <th scope="col">Department</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>   
+      <tr *ngFor="let subject of subjects">
+        <td>{{subject.subjectId}}</td>
+        <td>{{subject.subjectName}}</td>
+        <td>{{subject.subjectCode}}</td>
+        <td>{{ subject.credits }}</td>
+        <td>{{ subject.department }}</td>
+        <th>
+            <a class="btn btn-danger">DELETE</a> &nbsp;
+            <a class="btn btn-success" href="/editsubject/${u.subjectname}">  EDIT</a>
+        </th>
+    
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,69 @@
+<app-menu></app-menu>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<form (ngSubmit)="addstudent()">
+<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="./assets/img/image.png" alt=""/>
+                        <h3>Welcome</h3>
+                        <p>You are 30 seconds away from earning your own money!</p>
+                        
+                    </div>
+                    <div class="col-md-9 register-right">
+                      
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Student Registration</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Your College Id</label><br>
+                                            <input type="number" class="form-control" placeholder="Id *" [(ngModel)]="id" name="id" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;  First Name</label><br>
+                                            <input type="text" class="form-control" placeholder="First Name *" [(ngModel)]="firstName"  name="firstName" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Last Name</label><br>
+                                            <input type="text" class="form-control" placeholder="Last Name *" [(ngModel)]="lastName" name="lastName" required />
+                                        </div>
+                                       
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Your Course</label><br>
+                                            <select class="form-control" [(ngModel)]="course" name="course">
+                                                <option class="hidden"  selected disabled>Please select your course</option>
+                                                <option value="Student">CSE</option>
+                                                <option value="Mechanical">Mechanical</option>
+                                            </select>
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Your Email</label><br>
+                                            <input type="email" class="form-control" placeholder="Your Email *" [(ngModel)]="email" name="email" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Your Year of Study</label><br>
+                                            <input type="number"  name="year" class="form-control" placeholder="Year *" [(ngModel)]="year"  required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>  &nbsp;  Your Department</label><br>
+                                            <select class="form-control" [(ngModel)]="department" name="role">
+                                                <option class="hidden"  selected disabled>Please select your Department</option>
+                                                <option value="Student">Student</option>
+                                                <option value="Faculty">Faculty</option>
+                                            </select>
+                                        </div>
+                                        <input type="submit" class="btnRegister"  value="Add User"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form> 

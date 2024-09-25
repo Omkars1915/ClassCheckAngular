@@ -1,0 +1,55 @@
+
+<app-menu></app-menu>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<form (ngSubmit)="updateuser()">
+<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="./assets/img/image.png" alt=""/>
+                        <h3>Welcome</h3>
+                        <p>You are 30 seconds away from earning your own money!</p>
+                        
+                    </div>
+                    <div class="col-md-9 register-right">
+                      
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Edit User</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="First Name *" [(ngModel)]="firstName"  name="firstName" required/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Last Name *" [(ngModel)]="lastName" name="lastName" required/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Password *" [(ngModel)]="password" name="password" required />
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Your Email *" [(ngModel)]="email" name="email" required/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text"  name="username" class="form-control" placeholder="Username *" [(ngModel)]="username"  readonly name="username" required/>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control" [(ngModel)]="role" name="role">
+                                                <option selected disabled>Please select your Role</option>
+                                                <option value="Student">Student</option>
+                                                <option value="Faculty">Faculty</option>
+                                            </select>
+                                        </div>
+                                        <input type="submit" class="btnRegister"  value="Update"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form> 
