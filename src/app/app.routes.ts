@@ -11,6 +11,8 @@ import { GetallstudentsComponent } from './components/getallstudents/getallstude
 import { AddsubjectComponent } from './components/addsubject/addsubject.component';
 import { GetallsubjectsComponent } from './components/getallsubjects/getallsubjects.component';
 import { EdituserComponent } from './components/edituser/edituser.component';
+import { TakeattendaceComponent } from './components/takeattendace/takeattendace.component';
+import { ViewattendanceComponent } from './components/viewattendance/viewattendance.component';
 
 export const routes: Routes = [
     {
@@ -42,5 +44,11 @@ export const routes: Routes = [
     },
     {
         path:'edituser/:username',component:EdituserComponent
+    },
+    {
+        path: 'takeattendance',component:TakeattendaceComponent
+    },
+    {
+        path:'viewattendance',component:ViewattendanceComponent
     }
 ];

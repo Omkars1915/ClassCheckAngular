@@ -25,6 +25,8 @@ export class LoginComponent {
     if(this.username && this.password){
       this.loginservice.loginUser(this.username,this.password).subscribe((resp)=>{
         if(resp!=null){
+          localStorage.setItem("username",this.username)
+        
           this.router.navigate(['/home'])
         }else{
           alert("Invalid Credientials")

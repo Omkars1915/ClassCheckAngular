@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 })
 export class MenuComponent {
 
+  username=localStorage.getItem("username")
   // constructor(private userservice:UserService, private router:Router){}
   // users:any[]=[];
   // getallusers(){
