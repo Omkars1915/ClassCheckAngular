@@ -12,12 +12,14 @@
 
         <div class="col-md-3">
             <label for="">Select Faculty</label>
-            <select class="form-control  center-text-select" [(ngModel)]="selectedFaculty">
+            <!-- <select class="form-control  center-text-select" [(ngModel)]="selecteduser">
                 <option value=""> Select Faculty</option>
-                <option *ngFor="let faculty of facultyUser" [value]="faculty.username">{{ faculty.username }}</option>
-            </select>
+                <option *ngFor="let u of users" [value]="u.username">{{ u.username }}</option>
+            </select> -->
+            <select class="form-select" [(ngModel)]="selectedStudents" aria-label="Select First Subject">
+                <option *ngFor="let student of students" [value]="student.id">{{ student.firstName }}</option>
+              </select>
         </div>
-
         <div class="col-md-3">
             <label for="datePicker">Select a Date:</label>
             <div class="form-control">
@@ -29,9 +31,9 @@
 
         <div class="col-md-3">
             <label for="">Select Time</label>
-            <select class="form-control center-text-select" (change)="onDateChange($event)">
+            <select class="form-control center-text-select" (change)="onTimeChange($event)">
                 <option value=""> Select Time</option>
-                <!-- AM Times -->
+               
                 <option value="08:00 AM">08:00 AM</option>
                 <option value="08:30 AM">08:30 AM</option>
                 <option value="09:00 AM">09:00 AM</option>
@@ -41,7 +43,7 @@
                 <option value="11:00 AM">11:00 AM</option>
                 <option value="11:30 AM">11:30 AM</option>
 
-                <!-- PM Times -->
+                
                 <option value="12:00 PM">12:00 PM</option>
                 <option value="12:30 PM">12:30 PM</option>
                 <option value="13:00 PM">01:00 PM</option>
@@ -76,7 +78,7 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let student of students">
-                            <!-- Hide the ID cell -->
+                            
                             <td>
                                 {{ student.firstName }}
                             </td>
@@ -90,4 +92,4 @@
                 <button type="submit" class="btn btn-primary">Submit Attendance</button>
             </form>
         </div>
-</div>
+</div> 

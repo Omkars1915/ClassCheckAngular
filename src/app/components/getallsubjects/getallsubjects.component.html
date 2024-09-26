@@ -23,5 +23,11 @@
         </th>
     
       </tr>
+      <label for="contactMethod">Select Subject</label>
+        <select class="form-select" [(ngModel)]="selectedSubject" aria-label="Select Subject">
+  
+          <option *ngFor="let subject of subjects" [value]="subject.subjectId">{{ subject.subjectName}}</option>
+        </select>
+      
     </tbody>
   </table>

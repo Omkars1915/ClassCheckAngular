@@ -1,23 +1,21 @@
 import { HttpClient,withFetch } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Student } from '../models/student.module';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StudentService {
+  getAllStudents() {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(private http:HttpClient) { }
-  addstudent(id:number,
-    firstName:string,
-    lastName:string,
-    email:string,
-    course:string,
-    year:number,
-    department:string
+  addstudent(student:Student
   ):Observable<any>{
     const addstudenturl='http://localhost:8080/student/add-student'
-    return this.http.post<any>(addstudenturl,{id,firstName,lastName,email,course,year,department})
+    return this.http.post<any>(addstudenturl,student)
   } 
   
   getallstudents():Observable<any[]>{

@@ -20,20 +20,20 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>  &nbsp;  Your College Id</label><br>
-                                            <input type="number" class="form-control" placeholder="Id *" [(ngModel)]="id" name="id" required />
+                                            <input type="number" class="form-control" placeholder="Id *" [(ngModel)]="student.id" name="id" required />
                                         </div>
                                         <div class="form-group">
                                             <label>  &nbsp;  First Name</label><br>
-                                            <input type="text" class="form-control" placeholder="First Name *" [(ngModel)]="firstName"  name="firstName" required />
+                                            <input type="text" class="form-control" placeholder="First Name *" [(ngModel)]="student.firstName"  name="firstName" required />
                                         </div>
                                         <div class="form-group">
                                             <label>  &nbsp;  Last Name</label><br>
-                                            <input type="text" class="form-control" placeholder="Last Name *" [(ngModel)]="lastName" name="lastName" required />
+                                            <input type="text" class="form-control" placeholder="Last Name *" [(ngModel)]="student.lastName" name="lastName" required />
                                         </div>
                                        
                                         <div class="form-group">
                                             <label>  &nbsp;  Your Course</label><br>
-                                            <select class="form-control" [(ngModel)]="course" name="course">
+                                            <select class="form-control" [(ngModel)]="student.course" name="course">
                                                 <option class="hidden"  selected disabled>Please select your course</option>
                                                 <option value="Student">CSE</option>
                                                 <option value="Mechanical">Mechanical</option>
@@ -44,15 +44,15 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>  &nbsp;  Your Email</label><br>
-                                            <input type="email" class="form-control" placeholder="Your Email *" [(ngModel)]="email" name="email" required />
+                                            <input type="email" class="form-control" placeholder="Your Email *" [(ngModel)]="student.email" name="email" required />
                                         </div>
                                         <div class="form-group">
                                             <label>  &nbsp;  Your Year of Study</label><br>
-                                            <input type="number"  name="year" class="form-control" placeholder="Year *" [(ngModel)]="year"  required />
+                                            <input type="number"  name="year" class="form-control" placeholder="Year *" [(ngModel)]="student.year"  required />
                                         </div>
                                         <div class="form-group">
                                             <label>  &nbsp;  Your Department</label><br>
-                                            <select class="form-control" [(ngModel)]="department" name="role">
+                                            <select class="form-control" [(ngModel)]="student.department" name="role">
                                                 <option class="hidden"  selected disabled>Please select your Department</option>
                                                 <option value="Student">Student</option>
                                                 <option value="Faculty">Faculty</option>

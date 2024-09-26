@@ -5,6 +5,7 @@ import { response } from 'express';
 import { MenuComponent } from "../menu/menu.component";
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Subject } from '../../models/subject.module';
 
 @Component({
   selector: 'app-addsubject',
@@ -16,13 +17,15 @@ import { CommonModule } from '@angular/common';
 export class AddsubjectComponent {
 
   constructor(private subjectservice:SubjectService,private router:Router){}
-  subjectId:any
-    subjectName:string=''
-    subjectCode:string=''
-    credits:any
-    department:string=''
+  subject:Subject={
+    subjectId: 0,
+    subjectName: '',
+    subjectCode: '',
+    credits: 0,
+    department: ''
+  }
   addsubject(){
-    this.subjectservice.addsubject(this.subjectId,this.subjectName,this.subjectCode,this.credits,this.department).subscribe((response)=>{
+    this.subjectservice.addsubject(this.subject).subscribe((response)=>{
       alert("Subject Added successfully")
     })
   }

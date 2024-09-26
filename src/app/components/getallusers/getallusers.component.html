@@ -31,3 +31,7 @@
     </tr>
   </tbody>
 </table>
+<label for="firstSubject">Select Subject</label>
+<select class="form-select" [(ngModel)]="selecteduser" aria-label="Select First Subject">
+  <option *ngFor="let subject of users" [value]="subject.subjectId">{{ subject.username }}</option>
+</select>

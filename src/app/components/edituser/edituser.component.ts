@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { UserService } from '../../services/user.service';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
+import { User } from '../../models/user.module';
 
 
 @Component({
@@ -15,6 +16,12 @@ import { Router } from '@angular/router';
   styleUrl: './edituser.component.css'
 })
 export class EdituserComponent implements OnInit {
+  username: any;
+  password: any;
+  firstName: any;
+  lastName: any;
+  email: any;
+  role: any;
 
 
 constructor(private userservice:UserService,
@@ -26,12 +33,15 @@ private router:Router){}
   }
 selected:any
 
-  username: String = '';
-  password: String = '';
-  firstName: String = '';
-  lastName: String = '';
-  role: String = '';
-  email: String = '';
+user:User={
+  username: '',
+  password: '',
+  firstName: '',
+  lastName: '',
+  role: '',
+  email: ''
+}
+
 getuser() {
   this.selected=this.activatedRoute.snapshot.paramMap.get('username')
   
@@ -42,7 +52,6 @@ getuser() {
     this.lastName=response.lastName
     this.email=response.email
     this.role=response.role
-
   })
 
 }

@@ -7,6 +7,7 @@ import { UserService } from '../../services/user.service';
 import { response } from 'express';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { Student } from '../../models/student.module';
 
 @Component({
   selector: 'app-addstudent',
@@ -18,15 +19,17 @@ import { Router } from '@angular/router';
 export class AddstudentComponent {
 
   constructor(private studntservice:StudentService, router:Router){}
-  id:any
-    firstName:string=''
-    lastName:string=''
-    email:string=''
-    course:string=''
-    year:any
-    department:string=''
+  student:Student={
+    id: 0,
+    firstName: '',
+    lastName: '',
+    email: '',
+    course: '',
+    year: 0,
+    department: ''
+  }
   addstudent(){
-    this.studntservice.addstudent(this.id,this.firstName,this.lastName,this.email,this.course,this.year,this.department).subscribe((response)=>{
+    this.studntservice.addstudent(this.student).subscribe((response)=>{
       alert("Student added successfully")
     })
   }

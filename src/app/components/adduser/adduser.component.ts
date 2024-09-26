@@ -6,6 +6,7 @@ import { UserService } from '../../services/user.service';
 import { response } from 'express';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { User } from '../../models/user.module';
 
 @Component({
   selector: 'app-adduser',
@@ -16,21 +17,20 @@ import { Router } from '@angular/router';
 })
 export class AdduserComponent {
 
-  constructor(private userservice: UserService, private router:Router) { }
 
-  username: String = '';
-  password: String = '';
-  firstName: String = '';
-  lastName: String = '';
-  role: String = '';
-  email: String = '';
+  constructor(private userservice: UserService, private router:Router) { }
+  user:User={
+    username: '',
+    password: '',
+    firstName: '',
+    lastName: '',
+    role: '',
+    email: ''
+  }
+  
+
   adduser() {
-    this.userservice.adduser(this.username, 
-      this.password, 
-      this.firstName, 
-      this.lastName, 
-      this.role, 
-      this.email).subscribe((response) => {
+    this.userservice.adduser(this.user).subscribe((response) => {
       // alert("Done")
     this.router.navigate(['/getallusers'])
     })

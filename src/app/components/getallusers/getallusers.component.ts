@@ -7,10 +7,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ɵresolveComponentResources } from '@angular/core';
 import { response } from 'express';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-getallusers',
   standalone: true,
-  imports: [MenuComponent,CommonModule,RouterModule],
+  imports: [MenuComponent,CommonModule,RouterModule,FormsModule],
   templateUrl: './getallusers.component.html',
   styleUrl: './getallusers.component.css'
 })
@@ -21,7 +22,7 @@ export class GetallusersComponent implements OnInit {
     this.getallusers()
   }
 
- 
+ selecteduser:any
   users:any[]=[];
   ogOnInit(){
     this.getallusers();

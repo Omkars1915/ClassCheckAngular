@@ -1,6 +1,7 @@
 import { HttpClient,withFetch } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { User } from '../models/user.module';
 
 @Injectable({
   providedIn: 'root'
@@ -8,14 +9,9 @@ import { Observable } from 'rxjs';
 export class UserService {
   
   constructor(private http:HttpClient) { }
-  adduser(username:String,
-    password: String,
-    firstName:String,
-    lastName: String,
-    role: String, 
-    email: String):Observable<any>{
+  adduser(user:User):Observable<any>{
       const adduserurl='http://localhost:8080/user/add-user';
-return this.http.post<any>(adduserurl,{username,firstName,lastName,password,email,role})
+return this.http.post<User>(adduserurl,user)
   }
 
   getallusres():Observable<any[]>{

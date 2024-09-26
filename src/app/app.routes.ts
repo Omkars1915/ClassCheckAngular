@@ -13,6 +13,7 @@ import { GetallsubjectsComponent } from './components/getallsubjects/getallsubje
 import { EdituserComponent } from './components/edituser/edituser.component';
 import { TakeattendaceComponent } from './components/takeattendace/takeattendace.component';
 import { ViewattendanceComponent } from './components/viewattendance/viewattendance.component';
+import { TakeatComponent } from './components/takeat/takeat.component';
 
 export const routes: Routes = [
     {
@@ -46,7 +47,7 @@ export const routes: Routes = [
         path:'edituser/:username',component:EdituserComponent
     },
     {
-        path: 'takeattendance',component:TakeattendaceComponent
+        path: 'takeattendance',component:TakeatComponent
     },
     {
         path:'viewattendance',component:ViewattendanceComponent

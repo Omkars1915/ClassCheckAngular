@@ -13,6 +13,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './getallsubjects.component.css'
 })
 export class GetallsubjectsComponent implements OnInit {
+
+  selectedSubject: any;
   constructor(private subjectservice:SubjectService){}
   ngOnInit(): void {
     this.getallsubejects();

@@ -20,11 +20,11 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>  &nbsp;  Subject ID</label><br>
-                                            <input type="number" class="form-control" placeholder="Id *" [(ngModel)]="subjectId" name="subjectId" required />
+                                            <input type="number" class="form-control" placeholder="Id *" [(ngModel)]="subject.subjectId" name="subjectId" required />
                                         </div>
                                         <div class="form-group">
                                             <label>  &nbsp;  Subject Name</label><br>
-                                            <input type="text" class="form-control" placeholder="subject name*" [(ngModel)]="subjectName"  name="subjectName" required />
+                                            <input type="text" class="form-control" placeholder="subject name*" [(ngModel)]="subject.subjectName"  name="subjectName" required />
                                         </div>
 
                                       
@@ -32,15 +32,15 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>  &nbsp;  Subject Code</label><br>
-                                            <input type="text" class="form-control" placeholder="subject code *" [(ngModel)]="subjectCode" name="subjectCode" required />
+                                            <input type="text" class="form-control" placeholder="subject code *" [(ngModel)]="subject.subjectCode" name="subjectCode" required />
                                         </div>
                                         <div class="form-group">
                                             <label>  &nbsp;  Credits</label><br>
-                                            <input type="number"  name="credits" class="form-control" placeholder="credits *" [(ngModel)]="credits"  required />
+                                            <input type="number"  name="credits" class="form-control" placeholder="credits *" [(ngModel)]="subject.credits"  required />
                                         </div>
                                         <div class="form-group">
                                             <label>  &nbsp;  Department</label><br>
-                                            <select class="form-control" [(ngModel)]="department" name="department">
+                                            <select class="form-control" [(ngModel)]="subject.department" name="department">
                                                 <option class="hidden"  selected disabled>Please select your Department</option>
                                                 <option value="Student">Student</option>
                                                 <option value="Faculty">Faculty</option>
