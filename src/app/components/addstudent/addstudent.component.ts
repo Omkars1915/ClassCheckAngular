@@ -18,7 +18,7 @@ import { Student } from '../../models/student.module';
 })
 export class AddstudentComponent {
 
-  constructor(private studntservice:StudentService, router:Router){}
+  constructor(private studntservice:StudentService,private router:Router){}
   student:Student={
     id: 0,
     firstName: '',
@@ -32,6 +32,7 @@ export class AddstudentComponent {
   addstudent(){
     this.studntservice.addstudent(this.student).subscribe((response)=>{
       alert("Student added successfully")
+      this.router.navigate(['getallstudents'])
     })
   }
 }

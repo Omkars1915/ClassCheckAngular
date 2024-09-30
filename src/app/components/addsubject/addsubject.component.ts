@@ -27,6 +27,7 @@ export class AddsubjectComponent {
   addsubject(){
     this.subjectservice.addsubject(this.subject).subscribe((response)=>{
       alert("Subject Added successfully")
+      this.router.navigate(['/getallsubjects'])
     })
   }
 }
