@@ -50,8 +50,12 @@ this.view()
     this.attendanceservice
     .viewattendance().subscribe((response) => {
       this.showAll = response;
+     
     });
   }
+  
+
+
   getallsubejects(){
     this.subjectservice.getallsubejects().subscribe((response)=>{
       this.subjects=response
@@ -67,9 +71,6 @@ searchAttendance(): void {
   });
 }
 }
-
- 
-
 
 
 //   private transformData(data: any): ShowAllAttendance {

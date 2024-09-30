@@ -26,11 +26,10 @@
           <th scope="col">ID</th>
           <th scope="col">Date</th>
           <th scope="col">Time</th>
-          <!-- <th scope="col">Date Time</th> -->
           <th scope="col">Subject Name</th>
           <th scope="col">Counts</th>
-          <!-- <th scope="col">username </th> -->
           <th scope="col">Students </th>
+          <th scope="col">username </th>
 
         </tr>
       </thead>
@@ -41,13 +40,15 @@
           <td>{{data.time}}</td>
           <td>{{data.subject?.subjectName}}</td>
           <td>{{data.counts}}</td>
-           <!-- <td>{{data.username?.username}}</td> -->
-           <td >
+          
+          <td >
             
-              <li *ngFor="let student of data.students">
-                {{ student.firstName }}
-              </li>
+            <li *ngFor="let student of data.students">
+              {{ student.firstName }}
+            </li>
           </td>
+          <td>{{data.username?.username}}</td>
+
         </tr>
       </tbody>
     </table>
