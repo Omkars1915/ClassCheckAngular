@@ -6,5 +6,5 @@ export interface Student {
     course:string;
     year:number;
     department:string;
-  
+  isSelected:boolean;
 }

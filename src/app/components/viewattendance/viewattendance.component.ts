@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { ShowAllAttendance } from '../../models/showallattendance/showallattendance.module';
 import { SubjectService } from '../../services/subject.service';
 import { map } from 'rxjs';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-viewattendance',
@@ -28,13 +29,23 @@ attendance: any;
   filteredAttendanceRecords: ShowAllAttendance[] = []; 
   constructor(
     private attendanceservice:AttendanceService,
-    private subjectservice:SubjectService) { }
+    private subjectservice:SubjectService,
+  private userservce:UserService) { }
 
   ngOnInit() {
     this.getallsubejects()
 this.view()
    
   }
+  selecteduser:any
+  users:any[]=[];
+  getallusers(){
+    this.userservce.getallusres().subscribe((response)=>{
+      this.users=response
+      
+    })
+  }
+
   view(){
     this.attendanceservice
     .viewattendance().subscribe((response) => {

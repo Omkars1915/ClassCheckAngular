@@ -7,6 +7,7 @@ import { StudentService } from '../../services/student.service';
 import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
 import { ShowAllAttendance } from '../../models/showallattendance/showallattendance.module';
+import { Student } from '../../models/student.module';
 import { AttendanceService } from '../../services/attendance.service';
 import { response } from 'express';
 
@@ -18,14 +19,18 @@ import { response } from 'express';
   styleUrl: './takeat.component.css'
 })
 export class TakeatComponent {
+
+
   selectedIds: number[] = [];
-  selectedStudents!: number;
+  selectedStudents:any;
   selectedSubject!: number;
   selectedDate!: string;
   selectedTime!: string;
   counts!: number;
   selectedFaculty: any;
   attendanceService: any;
+
+
 
   onFacultyChange(event: Event) {
     const selectElement = event.target as HTMLSelectElement;
@@ -78,7 +83,10 @@ export class TakeatComponent {
 
  
   submitAttendance() {
-
+    this.selectedIds = this.students
+      .filter((student: { isSelected: any; }) => student.isSelected)
+      .map((student: { id: any; }) => student.id);
+      
     const attendanceRecord: ShowAllAttendance = {
       username: this.selecteduser,
       subId: this.selectedSubject,
@@ -88,7 +96,7 @@ export class TakeatComponent {
       counts: this.selectedIds.length
     };
 
-  this.counts= this.selectedIds.length;
+  
 
   this.attendanceserive.takeattendance(attendanceRecord).subscribe((response)=>{
 alert("Attendance Submmoted")

@@ -14,6 +14,7 @@ import { EdituserComponent } from './components/edituser/edituser.component';
 import { TakeattendaceComponent } from './components/takeattendace/takeattendace.component';
 import { ViewattendanceComponent } from './components/viewattendance/viewattendance.component';
 import { TakeatComponent } from './components/takeat/takeat.component';
+import { AuthService } from './services/auth.service';
 
 export const routes: Routes = [
     {
@@ -26,30 +27,30 @@ export const routes: Routes = [
         path: 'menu', component:MenuComponent
     },
     {
-        path:'adduser', component:AdduserComponent
+        path:'adduser', component:AdduserComponent,canActivate:[AuthService]
     },
     {
-        path:'getallusers', component:GetallusersComponent
+        path:'getallusers', component:GetallusersComponent,canActivate:[AuthService]
     },
     {
-        path:'addstudent',component:AddstudentComponent
+        path:'addstudent',component:AddstudentComponent,canActivate:[AuthService]
     },
     {
-        path:'getallstudents',component:GetallstudentsComponent
+        path:'getallstudents',component:GetallstudentsComponent,canActivate:[AuthService]
     },
     {
-        path:'addsubject',component:AddsubjectComponent
+        path:'addsubject',component:AddsubjectComponent,canActivate:[AuthService]
     },
     {
-        path:'getallsubjects',component:GetallsubjectsComponent
+        path:'getallsubjects',component:GetallsubjectsComponent,canActivate:[AuthService]
     },
     {
-        path:'edituser/:username',component:EdituserComponent
+        path:'edituser/:username',component:EdituserComponent,canActivate:[AuthService]
     },
     {
-        path: 'takeattendance',component:TakeatComponent
+        path: 'takeattendance',component:TakeatComponent,canActivate:[AuthService]
     },
     {
-        path:'viewattendance',component:ViewattendanceComponent
+        path:'viewattendance',component:ViewattendanceComponent,canActivate:[AuthService]
     }
 ];

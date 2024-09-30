@@ -12,13 +12,13 @@
 
         <div class="col-md-3">
             <label for="">Select Faculty</label>
-            <!-- <select class="form-control  center-text-select" [(ngModel)]="selecteduser">
+            <select class="form-control  center-text-select" [(ngModel)]="selecteduser">
                 <option value=""> Select Faculty</option>
                 <option *ngFor="let u of users" [value]="u.username">{{ u.username }}</option>
-            </select> -->
-            <select class="form-select" [(ngModel)]="selectedStudents" aria-label="Select First Subject">
+            </select>
+            <!-- <select class="form-select" [(ngModel)]="selectedStudents" aria-label="Select First Subject">
                 <option *ngFor="let student of students" [value]="student.id">{{ student.firstName }}</option>
-              </select>
+              </select> -->
         </div>
         <div class="col-md-3">
             <label for="datePicker">Select a Date:</label>
@@ -84,7 +84,7 @@
                             </td>
 
                             <td>
-                                <input type="checkbox" [(ngModel)]="students" [value]="student.id" name="id" />
+                                <input type="checkbox" [(ngModel)]="student.isSelected" [value]="student.id" name="id" />
                             </td>
                         </tr>
                     </tbody>

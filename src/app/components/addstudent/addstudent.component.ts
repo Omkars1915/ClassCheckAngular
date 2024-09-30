@@ -26,7 +26,8 @@ export class AddstudentComponent {
     email: '',
     course: '',
     year: 0,
-    department: ''
+    department: '',
+    isSelected: false
   }
   addstudent(){
     this.studntservice.addstudent(this.student).subscribe((response)=>{
